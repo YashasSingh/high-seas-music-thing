@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Beatbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Logo and Tooltip -->
+    <header class="header">
+        <div class="logo">🎤 Beatboxer Pro</div>
+        <button class="tooltip" onclick="toggleHelp()">❓</button>
+        <div id="helpText" class="help-text hidden">
+            <p>Type beatbox sounds (e.g., "boom psh ka") in the text box below. Adjust the BPM and volume, then click Play!</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Text to Beatbox</h1>
+        <textarea id="textInput" placeholder="Enter beatbox text here..."></textarea>
+        
+        <!-- BPM and Volume Controls -->
+        <div class="controls">
+            <label for="bpmInput">BPM:</label>
+            <input type="range" id="bpmInput" min="60" max="180" value="120" oninput="updateBpmDisplay()">
+            <span id="bpmDisplay">120</span>
+        </div>
+
+        <div class="controls">
+            <label for="volumeInput">Volume:</label>
+            <input type="range" id="volumeInput" min="0" max="1" step="0.1" value="0.5" oninput="updateVolume()">
+            <span id="volumeDisplay">50%</span>
+        </div>
+        
+        <!-- Playback and Reset Buttons -->
+        <div class="buttons">
+            <button onclick="playBeatbox()">▶️ Play</button>
+            <button onclick="pauseBeatbox()">⏸ Pause</button>
+            <button onclick="stopBeatbox()">⏹ Stop</button>
+            <button onclick="resetText()">🔄 Reset</button>
+        </div>
+
+        <!-- BPM Visualizer -->
+        <div id="bpmVisualizer" class="visualizer"></div>
+    </div>
+
+    <footer>
+        <p>baller</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
