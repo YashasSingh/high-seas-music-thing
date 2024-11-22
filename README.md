@@ -1,5 +1,6 @@
 # high-seas-music-thing
 
+![Screenshot 2024-11-06 174023](https://github.com/user-attachments/assets/217deba0-1bee-4904-9096-1b8f276f6ca3)
 
 # Text-to-Beatbox Web App 🎤
 
